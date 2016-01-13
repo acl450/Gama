@@ -2,6 +2,7 @@
 using ModuloDeAtenciones.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -14,6 +15,20 @@ namespace Gama.Atenciones.Wpf.Wrapper
         public PersonaWrapper(Persona model) : base(model)
         {
             InitializeComplexProperties(model);
+            InitializeCollectionProperties(model);
+        }
+
+        private void InitializeCollectionProperties(Persona model)
+        {
+            if (model.Citas == null)
+            {
+                throw new ArgumentException("Citas no puede ser nulo");
+            }
+
+            this.Citas = new ObservableCollection<CitaWrapper>(
+                model.Citas.Select(c => new CitaWrapper(c)));
+
+            RegisterCollection(Citas, model.Citas);
         }
 
         private void InitializeComplexProperties(Persona model)
@@ -100,5 +115,7 @@ namespace Gama.Atenciones.Wpf.Wrapper
         }
 
         public DireccionWrapper Direccion { get; private set; }
+
+        public ObservableCollection<CitaWrapper> Citas { get; private set; }
     }
 }

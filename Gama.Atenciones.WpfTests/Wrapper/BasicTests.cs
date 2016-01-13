@@ -64,6 +64,22 @@ namespace Gama.Atenciones.Wpf.Wrapper.Tests
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ShouldThrowArgumentExceptionIfCitasCollectionIsNull()
+        {
+            try
+            {
+                _persona.Citas = null;
+                var wrapper = new PersonaWrapper(_persona);
+            }
+            catch (ArgumentException ex)
+            {
+                Assert.AreEqual("Citas no puede ser nulo", ex.Message);
+                throw;
+            }
+        }
+
+        [TestMethod]
         public void ShouldGetValueOfUnderlyingModelProperty()
         {
             var wrapper = new PersonaWrapper(_persona);
