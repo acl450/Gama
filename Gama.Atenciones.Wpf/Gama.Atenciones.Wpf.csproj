@@ -123,6 +123,10 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Común\Gama.Común.csproj">
+      <Project>{761c0f2a-39f0-4df3-8682-e375e7ccf31e}</Project>
+      <Name>Gama.Común</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModuloDeAtenciones\Gama.Atenciones.Biz.csproj">
       <Project>{675c4ff2-6275-44e1-b257-aa00b07c938a}</Project>
       <Name>Gama.Atenciones.Biz</Name>
