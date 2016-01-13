@@ -8,19 +8,11 @@ using System.Threading.Tasks;
 
 namespace Gama.Atenciones.Wpf.Wrapper
 {
-    public class PersonaWrapper : Observable
+    public class PersonaWrapper : ModelWrapper<Persona>
     {
-        public PersonaWrapper(Persona model)
+        public PersonaWrapper(Persona model) : base(model)
         {
-            if (model == null)
-            {
-                throw new ArgumentNullException("model");
-            }
-
-            this.Model = model;
         }
-
-        public Persona Model { get; set; }
 
         public string Nombre
         {
