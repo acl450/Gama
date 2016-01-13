@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gama.Atenciones.Biz", "ModuloDeAtenciones\Gama.Atenciones.Biz.csproj", "{675C4FF2-6275-44E1-B257-AA00B07C938A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F8DBCE0F-9DC8-499F-8423-516A8AC0D69B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentación", "Documentación", "{C40D1251-14ED-49E8-A625-47E078C6CC26}"
+	ProjectSection(SolutionItems) = preProject
+		Sprint backlog.txt = Sprint backlog.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gama.Atenciones.Datos", "Datos\Gama.Atenciones.Datos.csproj", "{D0014E3A-600C-46D9-A738-CC69EC573699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gama.Común", "Común\Gama.Común.csproj", "{761C0F2A-39F0-4DF3-8682-E375E7CCF31E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gama.Atenciones.Wpf", "Gama.Atenciones.Wpf\Gama.Atenciones.Wpf.csproj", "{DE89AE68-FA06-464D-BFF1-656417D076E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gama.Atenciones.WpfTests", "Gama.Atenciones.WpfTests\Gama.Atenciones.WpfTests.csproj", "{A719F271-0160-4076-B8B9-F76EF4ABDCDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{675C4FF2-6275-44E1-B257-AA00B07C938A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675C4FF2-6275-44E1-B257-AA00B07C938A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675C4FF2-6275-44E1-B257-AA00B07C938A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675C4FF2-6275-44E1-B257-AA00B07C938A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0014E3A-600C-46D9-A738-CC69EC573699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0014E3A-600C-46D9-A738-CC69EC573699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0014E3A-600C-46D9-A738-CC69EC573699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0014E3A-600C-46D9-A738-CC69EC573699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{761C0F2A-39F0-4DF3-8682-E375E7CCF31E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761C0F2A-39F0-4DF3-8682-E375E7CCF31E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761C0F2A-39F0-4DF3-8682-E375E7CCF31E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761C0F2A-39F0-4DF3-8682-E375E7CCF31E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE89AE68-FA06-464D-BFF1-656417D076E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE89AE68-FA06-464D-BFF1-656417D076E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE89AE68-FA06-464D-BFF1-656417D076E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE89AE68-FA06-464D-BFF1-656417D076E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A719F271-0160-4076-B8B9-F76EF4ABDCDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A719F271-0160-4076-B8B9-F76EF4ABDCDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A719F271-0160-4076-B8B9-F76EF4ABDCDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A719F271-0160-4076-B8B9-F76EF4ABDCDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A719F271-0160-4076-B8B9-F76EF4ABDCDE} = {F8DBCE0F-9DC8-499F-8423-516A8AC0D69B}
+	EndGlobalSection
+EndGlobal

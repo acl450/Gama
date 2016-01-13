@@ -1,4 +1,5 @@
-﻿using ModuloDeAtenciones.Model;
+﻿using Común;
+using ModuloDeAtenciones.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Gama.Atenciones.Wpf.Wrapper
 {
-    public class PersonaWrapper
+    public class PersonaWrapper : Observable
     {
         public PersonaWrapper(Persona model)
         {
@@ -24,7 +25,14 @@ namespace Gama.Atenciones.Wpf.Wrapper
         public string Nombre
         {
             get { return this.Model.Nombre; }
-            set { this.Model.Nombre = value; }
+            set
+            {
+                if (!Equals(this.Model.Nombre, value))
+                {
+                    this.Model.Nombre = value;
+                    OnPropertyChanged();
+                }
+            }
         }
     }
 }

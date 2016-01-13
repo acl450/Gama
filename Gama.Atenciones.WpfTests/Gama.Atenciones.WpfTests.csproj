@@ -53,8 +53,13 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Wrapper\BasicTests.cs" />
+    <Compile Include="Wrapper\ChangeNotificationSimpleProperty.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Común\Gama.Común.csproj">
+      <Project>{761c0f2a-39f0-4df3-8682-e375e7ccf31e}</Project>
+      <Name>Gama.Común</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gama.Atenciones.Wpf\Gama.Atenciones.Wpf.csproj">
       <Project>{DE89AE68-FA06-464D-BFF1-656417D076E3}</Project>
       <Name>Gama.Atenciones.Wpf</Name>
