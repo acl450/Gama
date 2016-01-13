@@ -20,5 +20,11 @@ namespace Gama.Atenciones.Wpf.Wrapper
         }
 
         public Persona Model { get; set; }
+
+        public string Nombre
+        {
+            get { return this.Model.Nombre; }
+            set { this.Model.Nombre = value; }
+        }
     }
 }

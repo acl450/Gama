@@ -19,7 +19,7 @@ namespace Gama.Atenciones.Wpf.Wrapper.Tests
         {
             _persona = new Persona
             {
-                Nombre = "Alberto",
+                Nombre = "Thomas",
                 Citas = new List<Cita>()
             };
         }
@@ -44,6 +44,22 @@ namespace Gama.Atenciones.Wpf.Wrapper.Tests
                 Assert.AreEqual("model", ex.ParamName);
                 throw;
             }
+        }
+
+        [TestMethod]
+        public void ShouldGetValueOfUnderlyingModelProperty()
+        {
+            var wrapper = new PersonaWrapper(_persona);
+            Assert.AreEqual(_persona.Nombre, wrapper.Nombre);
+        }
+
+        [TestMethod]
+        public void ShouldSetValueOfUnderlyingModelProperty()
+        {
+            var wrapper = new PersonaWrapper(_persona);
+            wrapper.Nombre = "Julia";
+
+            Assert.AreEqual("Julia", _persona.Nombre);
         }
     }
 }
