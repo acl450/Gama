@@ -42,10 +42,15 @@ namespace Gama.Atenciones.Wpf.Wrapper
             set { SetValue(value); }
         }
 
-
         public DateTime? FechaDeNacimiento
         {
             get { return GetValue<DateTime?>(); }
+            set { SetValue(value); }
+        }
+
+        public Direccion Direccion
+        {
+            get { return GetValue<Direccion>(); }
             set { SetValue(value); }
         }
 

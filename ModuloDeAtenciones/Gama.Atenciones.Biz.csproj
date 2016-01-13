@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Cita.cs" />
+    <Compile Include="Model\Direccion.cs" />
     <Compile Include="Model\Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
