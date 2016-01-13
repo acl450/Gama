@@ -13,5 +13,7 @@ namespace ModuloDeAtenciones.Model
         public string Asesor { get; set; }
 
         public string Sala { get; set; }
+
+        public int PersonaId { get; set; }
     }
 }
