@@ -13,6 +13,17 @@ namespace Gama.Atenciones.Wpf.Wrapper
     {
         public PersonaWrapper(Persona model) : base(model)
         {
+            InitializeComplexProperties(model);
+        }
+
+        private void InitializeComplexProperties(Persona model)
+        {
+            if (model.Direccion == null)
+            {
+                throw new ArgumentException("La dirección no puede ser nula");
+            }
+
+            this.Direccion = new DireccionWrapper(model.Direccion);
         }
 
         public string Nombre
@@ -20,7 +31,6 @@ namespace Gama.Atenciones.Wpf.Wrapper
             get { return GetValue<string>(); }
             set { SetValue(value); }
         }
-
 
         public string Email
         {
@@ -35,7 +45,6 @@ namespace Gama.Atenciones.Wpf.Wrapper
             set { SetValue(value); }
         }
 
-
         public string Nacionalidad
         {
             get { return GetValue<string>(); }
@@ -45,12 +54,6 @@ namespace Gama.Atenciones.Wpf.Wrapper
         public DateTime? FechaDeNacimiento
         {
             get { return GetValue<DateTime?>(); }
-            set { SetValue(value); }
-        }
-
-        public Direccion Direccion
-        {
-            get { return GetValue<Direccion>(); }
             set { SetValue(value); }
         }
 
@@ -95,5 +98,7 @@ namespace Gama.Atenciones.Wpf.Wrapper
             get { return GetValue<string>(); }
             set { SetValue(value); }
         }
+
+        public DireccionWrapper Direccion { get; private set; }
     }
 }

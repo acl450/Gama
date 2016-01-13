@@ -18,8 +18,6 @@ namespace ModuloDeAtenciones.Model
          
         public string Nacionalidad { get; set; }
 
-        public Direccion Direccion { get; set; }
-
         public DateTime? FechaDeNacimiento { get; set; } // Nullable
 
         public int NumeroDeAtendido { get; set; }
@@ -35,6 +33,8 @@ namespace ModuloDeAtenciones.Model
         public string NivelAcademico { get; set; }
 
         public string Ocupacion { get; set; }
+
+        public Direccion Direccion { get; set; }
 
         public List<Cita> Citas { get; set; }
     }

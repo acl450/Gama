@@ -20,6 +20,7 @@ namespace Gama.Atenciones.Wpf.Wrapper.Tests
             _persona = new Persona
             {
                 Nombre = "Thomas",
+                Direccion = new Direccion(),
                 Citas = new List<Cita>()
             };
         }
@@ -42,6 +43,22 @@ namespace Gama.Atenciones.Wpf.Wrapper.Tests
             catch(ArgumentNullException ex)
             {
                 Assert.AreEqual("model", ex.ParamName);
+                throw;
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ShouldThrowArgumentExceptionIfAddressIsNull()
+        {
+            try
+            {
+                _persona.Direccion = null;
+                var wrapper = new PersonaWrapper(_persona);
+            }
+            catch(ArgumentException ex)
+            {
+                Assert.AreEqual("La dirección no puede ser nula", ex.Message);
                 throw;
             }
         }

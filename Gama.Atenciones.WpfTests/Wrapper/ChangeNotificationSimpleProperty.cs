@@ -1,11 +1,7 @@
 ﻿using Gama.Atenciones.Wpf.Wrapper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ModuloDeAtenciones.Model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gama.Atenciones.WpfTests.Wrapper
 {
@@ -20,6 +16,7 @@ namespace Gama.Atenciones.WpfTests.Wrapper
             _persona = new Persona
             {
                 Nombre = "Thomas",
+                Direccion = new Direccion(),
                 Citas = new List<Cita>()
             };
         }
