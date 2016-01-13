@@ -1,6 +1,6 @@
 using GalaSoft.MvvmLight;
 
-namespace ModuloDeAtenciones.ViewModel
+namespace Gama.Atenciones.Wpf.ViewModel
 {
     /// <summary>
     /// This class contains properties that the main View can data bind to.
@@ -19,7 +19,6 @@ namespace ModuloDeAtenciones.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        /// 
         public MainViewModel()
         {
             ////if (IsInDesignMode)
@@ -31,7 +30,5 @@ namespace ModuloDeAtenciones.ViewModel
             ////    // Code runs "for real"
             ////}
         }
-
-        
     }
 }
