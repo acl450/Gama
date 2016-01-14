@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ModuloDeAtenciones.Model
+namespace Gama.Atenciones.Biz.Model
 {
     public class Cita
     {

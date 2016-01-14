@@ -23,6 +23,7 @@ namespace Gama.Atenciones.Wpf
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new Gama.Atenciones.Wpf.DesignTimeData.DesignPersona();
         }
     }
 }

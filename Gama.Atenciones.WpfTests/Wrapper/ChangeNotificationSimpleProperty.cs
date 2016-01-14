@@ -1,6 +1,6 @@
 ﻿using Gama.Atenciones.Wpf.Wrapper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ModuloDeAtenciones.Model;
+using Gama.Atenciones.Biz.Model;
 using System.Collections.Generic;
 
 namespace Gama.Atenciones.WpfTests.Wrapper

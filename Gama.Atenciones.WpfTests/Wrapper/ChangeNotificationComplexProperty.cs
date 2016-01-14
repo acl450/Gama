@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ModuloDeAtenciones.Model;
+using Gama.Atenciones.Biz.Model;
 using Gama.Atenciones.Wpf.Wrapper;
 using System.Collections.Generic;
 

@@ -1,4 +1,4 @@
-﻿using ModuloDeAtenciones.Model;
+﻿using Gama.Atenciones.Biz.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ModuloDeAtenciones
+namespace Gama.Atenciones.Wpf.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EditarPersonaViewModel.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EditarPersonaView : UserControl
     {
-        public MainWindow()
+        public EditarPersonaView()
         {
             InitializeComponent();
         }

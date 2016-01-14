@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ModuloDeAtenciones.Model;
+using Gama.Atenciones.Biz.Model;
 
-namespace Gama.Atenciones.Wpf.Wrapper.Tests
+namespace Gama.Atenciones.WpfTests.Wrapper
 {
     [TestClass()]
     public class BasicTests

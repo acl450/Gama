@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModuloDeAtenciones.Model
+namespace Gama.Atenciones.Biz.Model
 {
     public class Direccion 
     {

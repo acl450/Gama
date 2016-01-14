@@ -7,8 +7,8 @@
     <ProjectGuid>{D0014E3A-600C-46D9-A738-CC69EC573699}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Datos</RootNamespace>
-    <AssemblyName>Datos</AssemblyName>
+    <RootNamespace>Gama.Atenciones.Datos</RootNamespace>
+    <AssemblyName>Gama.Atenciones.Datos</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
