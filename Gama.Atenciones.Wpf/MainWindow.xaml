@@ -23,6 +23,6 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         
-        <controles:PersonaControl Grid.Row="1" Grid.Column="1"/>
+        <controles:PersonaControl Grid.Row="1" Grid.Column="0"/>
     </Grid>
 </Window>
