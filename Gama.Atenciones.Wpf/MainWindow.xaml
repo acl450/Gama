@@ -7,8 +7,22 @@
         xmlns:designData="clr-namespace:Gama.Atenciones.Wpf.DesignTimeData"
         xmlns:controles="clr-namespace:Gama.Atenciones.Wpf.Controles"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="707.292" Width="525"
+        SizeToContent="WidthAndHeight">
+    <d:DataContext>
+        <designData:DesignPersona/>
+    </d:DataContext>
     <Grid>
-        <controles:PersonaControl/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <controles:PersonaControl Grid.Row="1" Grid.Column="1"/>
     </Grid>
 </Window>

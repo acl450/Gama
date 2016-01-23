@@ -20,6 +20,7 @@ namespace Gama.Atenciones.WpfTests.Wrapper
             _persona = new Persona
             {
                 Nombre = "Thomas",
+                EstadoCivil = EstadoCivil.Soltera,
                 Direccion = new Direccion(),
                 Citas = new List<Cita>()
             };

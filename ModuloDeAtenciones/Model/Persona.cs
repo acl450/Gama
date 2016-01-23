@@ -12,6 +12,8 @@ namespace Gama.Atenciones.Biz.Model
     [TypeConverter(typeof(EnumDescriptionTypeConverter))]
     public enum EstadoCivil
     {
+        [Description("No proporcionado")]
+        NoProporcionado,
         [Description("Casada/o")]
         Casada,
         [Description("Soltera/o")]
@@ -19,14 +21,14 @@ namespace Gama.Atenciones.Biz.Model
         [Description("Divorciada/o")]
         Divorciada,
         [Description("Viuda/o")]
-        Viuda,
-        [Description("No proporcionado")]
-        NoProporcionado
+        Viuda
     };
 
     [TypeConverter(typeof(EnumDescriptionTypeConverter))]
     public enum Orientacion
     {
+        [Description("No proporcionado")]
+        NoProporcionado,
         [Description("Heterosexual")]
         Heterosexual,
         [Description("Bisexual")]
@@ -34,14 +36,69 @@ namespace Gama.Atenciones.Biz.Model
         [Description("Lesbiana")]
         Lesbiana,
         [Description("Gay")]
-        Gay,
+        Gay
+    };
+
+    [TypeConverter(typeof(EnumDescriptionTypeConverter))]
+    public enum IdentidadSexual
+    {
+        [Description("No proporcionado")]
+        NoProporcionado,
+        [Description("Hombre")]
+        Hombre,
+        [Description("Mujer")]
+        Mujer,
+        [Description("Hombre transgénero")]
+        HombreTransgenero,
+        [Description("Mujer transgénero")]
+        MujerTransgenero
+    };
+
+    [TypeConverter(typeof(EnumDescriptionTypeConverter))]
+    public enum ComoConocioAGama
+    {
+        [Description("No proporcionado")]
+        NoProporcionado,
+        [Description("Red Informal")]
+        RedInformal,
+        [Description("Red Formal")]
+        RedFormal,
+        [Description("Difusión")]
+        Difusion
+    };
+
+    [TypeConverter(typeof(EnumDescriptionTypeConverter))]
+    public enum ViaDeAccesoAGama
+    {
+        [Description("No proporcionado")]
+        NoProporcionado,
+        [Description("Personal")]
+        Personal,
+        [Description("Email")]
+        Email,
+        [Description("Telefonica")]
+        Telefonica
+    };
+
+    [TypeConverter(typeof(EnumDescriptionTypeConverter))]
+    public enum NivelAcademico
+    {
+        [Description("No proporcionado")]
+        NoProporcionado,
+        [Description("Estudios Primarios")]
+        EstudiosPrimarios,
+        [Description("Estudios Secundarios")]
+        EstudiosSecundarios,
+        [Description("Estudios Superiores")]
+        EstudiosSuperiores
+    };
+
+    [TypeConverter(typeof(EnumDescriptionTypeConverter))]
+    public enum Ocupacion
+    {
         [Description("No proporcionado")]
         NoProporcionado
     };
-    public enum ComoConocioAGama { RedInformal, RedFormal, Difusion };
-    public enum ViaDeAccesoAGama { Personal, Email, Telefonica };
-    public enum NivelAcademico { EstudiosPrimarios, EstudiosSecundarios };
-    public enum Ocupacion { Ocupcion1, Ocupacion2 };
     #endregion
 
     public class Persona
@@ -60,17 +117,17 @@ namespace Gama.Atenciones.Biz.Model
 
         public int NumeroDeAtendido { get; set; }
 
-        public string EstadoCivil { get; set; }
+        public EstadoCivil EstadoCivil { get; set; }
 
-        public string Orientacion { get; set; }
+        public Orientacion Orientacion { get; set; }
 
-        public string Identidad { get; set; }
+        public IdentidadSexual Identidad { get; set; }
 
-        public string ComoConocioAGama { get; set; }
+        public ComoConocioAGama ComoConocioAGama { get; set; }
 
-        public string NivelAcademico { get; set; }
+        public NivelAcademico NivelAcademico { get; set; }
 
-        public string Ocupacion { get; set; }
+        public Ocupacion Ocupacion { get; set; }
 
         public Direccion Direccion { get; set; }
 

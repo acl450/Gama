@@ -13,6 +13,16 @@
                 <Setter Property="Background" Value="Beige"/>
                 <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="IsReadOnly" Value="True"/>
+                <Setter Property="Margin" Value="4"/>
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="Margin" Value="4"/>
+            </Style>
+            <Style TargetType="ComboBox">
+                <Setter Property="Background" Value="Beige"/>
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="IsReadOnly" Value="True"/>
+                <Setter Property="Margin" Value="4"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

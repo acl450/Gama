@@ -21,7 +21,7 @@ namespace Gama.Atenciones.Biz.Util
                     {
                         Type enumType = Nullable.GetUnderlyingType(value) ?? value;
                         if (!enumType.IsEnum)
-                            throw new ArgumentException("El tipo debe ser para una enumeación.");
+                            throw new ArgumentException("El tipo debe ser para una enumeración.");
                     }
 
                     this._enumType = value;

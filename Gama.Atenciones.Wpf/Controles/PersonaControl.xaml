@@ -6,22 +6,21 @@
              xmlns:model="clr-namespace:Gama.Atenciones.Biz.Model;assembly=Gama.Atenciones.Biz"
              xmlns:designData="clr-namespace:Gama.Atenciones.Wpf.DesignTimeData"
              xmlns:util="clr-namespace:Gama.Atenciones.Biz.Util;assembly=Gama.Atenciones.Biz"
-             mc:Ignorable="d" 
-             d:DesignHeight="435.616" d:DesignWidth="450"
-             Background="Gray"
+             mc:Ignorable="d"
+             Background="Gray" Height="603.616" Width="507"
              >
     <d:DataContext>
         <designData:DesignPersona/>
     </d:DataContext>
-    <Grid>
+    <Grid Margin="10" Grid.IsSharedSizeScope="True">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto" SharedSizeGroup="PrimeraColumna"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition/>    
+            <RowDefinition/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -32,79 +31,94 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="{Binding Nombre}" FontSize="18"/>
+        <TextBlock Text="{Binding Nombre}" FontSize="16"/>
 
         <Border Grid.Row="0"
                 Grid.RowSpan="3"
                 Grid.Column="1"
                 BorderThickness="2"
-                BorderBrush="Black">
+                BorderBrush="Black"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="5"
+                MaxWidth="200"
+                MaxHeight="200"
+                MinWidth="60"
+                MinHeight="60">
             <Image Source="{Binding Imagen}"/>
         </Border>
 
         <TextBox Grid.Row="1" Text="{Binding Email}"/>
 
         <Label Grid.Row="4" Content="NIF"/>
-        <TextBox Grid.Row="4" Grid.Column="4" Text="{Binding Nif}" />
+        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Nif}" />
 
         <Label Grid.Row="5" Content="Nacionalidad"/>
-        <TextBox Grid.Row="5" Grid.Column="5" Text="{Binding Nacionalidad}"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Nacionalidad}"/>
 
         <Label Grid.Row="6" Content="Fecha de Nacimiento"/>
-        <DatePicker Grid.Row="6" Grid.Column="6" Text="{Binding FechaDeNacimiento}" 
-                    />
+        <DatePicker Grid.Row="6" Grid.Column="1" Text="{Binding FechaDeNacimiento}" />
 
         <Label Grid.Row="7" Content="Estado Civil"/>
-        <ComboBox Grid.Row="7" Grid.Column="7"
-                  ItemsSource="{Binding Source={util:EnumBindingSource {x:Type model:EstadoCivil}}}"/>
+        <ComboBox Grid.Row="7" Grid.Column="1"
+                  ItemsSource="{Binding Source={util:EnumBindingSource {x:Type model:EstadoCivil}}}"
+                  SelectedItem="{Binding EstadoCivil}"
+                  IsSynchronizedWithCurrentItem="True">
+        </ComboBox>
 
         <Label Grid.Row="8" Content="Orientación Sexual"/>
-        <ComboBox Grid.Row="8" Grid.Column="8"
-                  ItemsSource="{Binding Source={util:EnumBindingSource {x:Type model:Orientacion}}}"/>
+        <ComboBox Grid.Row="8" Grid.Column="1"
+                  ItemsSource="{Binding Source={util:EnumBindingSource {x:Type model:Orientacion}}}"
+                  SelectedItem="{Binding Orientacion}"
+                  IsSynchronizedWithCurrentItem="True"/>
 
         <Label Grid.Row="9" Content="Identidad Sexual"/>
-        <ComboBox Grid.Row="9" Grid.Column="9">
-            <ComboBox.Items>
-                <ComboBoxItem Content="Hombre"/>
-                <ComboBoxItem Content="Mujer"/>
-                <ComboBoxItem Content="Hombre tránsgenero"/>
-                <ComboBoxItem Content="Mujer tránsgenero"/>
-            </ComboBox.Items>
-        </ComboBox>
+        <ComboBox Grid.Row="9" Grid.Column="1"
+                  ItemsSource="{Binding Source={util:EnumBindingSource {x:Type model:IdentidadSexual}}}" 
+                  SelectedItem="{Binding Identidad}"
+                  IsSynchronizedWithCurrentItem="True"/>
 
         <Label Grid.Row="10" Content="Cómo conoció a Gamá"/>
-        <ComboBox Grid.Row="10" Grid.Column="10">
-            <ComboBox.Items>
-                <ComboBoxItem Content="a"/>
-                <ComboBoxItem Content="b"/>
-                <ComboBoxItem Content="c"/>
-                <ComboBoxItem Content="d"/>
-            </ComboBox.Items>
-        </ComboBox>
+        <ComboBox Grid.Row="10" Grid.Column="1"
+                  ItemsSource="{Binding Source={util:EnumBindingSource {x:Type model:ComoConocioAGama}}}" 
+                  SelectedItem="{Binding ComoConocioAGama}"
+                  IsSynchronizedWithCurrentItem="True"/>
 
         <Label Grid.Row="11" Content="Nivel Académico"/>
-        <ComboBox Grid.Row="11" Grid.Column="11">
-            <ComboBox.Items>
-                <ComboBoxItem Content="1"/>
-                <ComboBoxItem Content="2"/>
-                <ComboBoxItem Content="3"/>
-                <ComboBoxItem Content="4"/>
-            </ComboBox.Items>
-        </ComboBox>
-        
+        <ComboBox Grid.Row="11" Grid.Column="1"
+                  ItemsSource="{Binding Source={util:EnumBindingSource {x:Type model:NivelAcademico}}}" 
+                  SelectedItem="{Binding NivelAcademico}"
+                  IsSynchronizedWithCurrentItem="True"/>
+
         <Label Grid.Row="12" Content="Ocupación"/>
-        <ComboBox Grid.Row="12" Grid.Column="12">
-            <ComboBox.Items>
-                <ComboBoxItem Content="alfa"/>
-                <ComboBoxItem Content="beta"/>
-                <ComboBoxItem Content="pi"/>
-                <ComboBoxItem Content="omega"/>
-            </ComboBox.Items>
-        </ComboBox>
+        <ComboBox Grid.Row="12" Grid.Column="1"
+                  ItemsSource="{Binding Source={util:EnumBindingSource {x:Type model:Ocupacion}}}" 
+                  SelectedItem="{Binding Ocupacion}"
+                  IsSynchronizedWithCurrentItem="True"/>
 
+        <GroupBox Grid.Row="13" Grid.ColumnSpan="2" Header="Dirección">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="PrimeraColumna"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Calle" Margin="15 0 0 0"/>
+                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Direccion.Calle}"/>
 
+                <Label Grid.Row="1" Grid.Column="0" Content="Ciudad" Margin="15 0 0 0"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Direccion.Ciudad}"/>
+
+                <Label Grid.Row="2" Grid.Column="0" Content="Isla" Margin="15 0 0 0"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Direccion.Isla}" />
+            </Grid>
+        </GroupBox>
     </Grid>
 </UserControl>

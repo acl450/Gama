@@ -19,12 +19,12 @@ namespace Gama.Atenciones.Wpf.DesignTimeData
             this.Nacionalidad = "Español";
             this.FechaDeNacimiento = null;
             this.NumeroDeAtendido = 1;
-            this.EstadoCivil = Enums.EstadoCivil.Casada.ToString();
-            this.Orientacion = Enums.Orientacion.NoProporcionado.ToString();
-            this.Identidad = "Hombre";
-            this.ComoConocioAGama = "Via Informal";
-            this.NivelAcademico = "Estudios Superiores";
-            this.Ocupacion = "Desempleado";
+            this.EstadoCivil = Enums.EstadoCivil.Casada;
+            this.Orientacion = Enums.Orientacion.Lesbiana;
+            this.Identidad = Enums.IdentidadSexual.MujerTransgenero;
+            this.ComoConocioAGama = Enums.ComoConocioAGama.Difusion;
+            this.NivelAcademico = Enums.NivelAcademico.EstudiosSuperiores;
+            this.Ocupacion = Enums.Ocupacion.NoProporcionado;
             this.Direccion = new Direccion
             {
                 Calle = "C/ Bethencourt Arrocha 47, 2ºB",

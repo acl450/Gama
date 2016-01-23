@@ -78,39 +78,39 @@ namespace Gama.Atenciones.Wpf.Wrapper
             set { SetValue(value); }
         }
 
-        public string EstadoCivil
+        public EstadoCivil EstadoCivil
         {
-            get { return GetValue<string>(); }
+            get { return GetValue<EstadoCivil>(); }
             set { SetValue(value); }
         }
 
-        public string Orientacion
+        public Orientacion Orientacion
         {
-            get { return GetValue<string>(); }
+            get { return GetValue<Orientacion>(); }
             set { SetValue(value); }
         }
 
-        public string Identidad
+        public IdentidadSexual Identidad
         {
-            get { return GetValue<string>(); }
+            get { return GetValue<IdentidadSexual>(); }
             set { SetValue(value); }
         }
 
-        public string ComoConocioAGama
+        public ComoConocioAGama ComoConocioAGama
         {
-            get { return GetValue<string>(); }
+            get { return GetValue<ComoConocioAGama>(); }
             set { SetValue(value); }
         }
 
-        public string NivelAcademico
+        public NivelAcademico NivelAcademico
         {
-            get { return GetValue<string>(); }
+            get { return GetValue<NivelAcademico>(); }
             set { SetValue(value); }
         }
 
-        public string Ocupacion
+        public Ocupacion Ocupacion
         {
-            get { return GetValue<string>(); }
+            get { return GetValue<Ocupacion>(); }
             set { SetValue(value); }
         }
 
