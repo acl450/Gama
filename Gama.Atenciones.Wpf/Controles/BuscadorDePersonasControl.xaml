@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Gama.Atenciones.Wpf.Controles.BuscadorDePersonasControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Gama.Atenciones.Wpf.Controles"
+             xmlns:actb="clr-namespace:Gama.Atenciones.Wpf.Controles.AutoCompleteTextBox"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <!-- Colleción de personas buscables. Se corresponde al total
+             de personas activas en la base de datos. -->
+        <CollectionViewSource x:Key="personasBuscables">
+            <CollectionViewSource.Source>
+                <PriorityBinding>
+                    <Binding 
+                            Path="ResultadoDeBusqueda"
+                            IsAsync="True"/>
+                    <Binding Path="MensajeDeEspera"/>
+                </PriorityBinding>
+            </CollectionViewSource.Source>
+        </CollectionViewSource>
+        
+        <!-- Selector para mostrar estado de espera mientras se realiza la búsqueda. -->
+        <local:BuscadorDePersonasDataTemplateSelector x:Key="BuscadorTemplateSelector"/>
+    </UserControl.Resources>
+    <Grid>
+        <actb:AutoCompleteTextBox
+            x:Name="actb"
+            Grid.Row="0"
+            Grid.Column="0"
+            Text="{Binding TextoDeBusqueda, UpdateSourceTrigger=PropertyChanged}"
+            Background="Transparent"
+            BorderBrush="{StaticResource brushWatermarkBorder}"
+            ToolTip="Introduce nombre para buscar..."
+            Height="28"
+            BorderThickness="1" 
+            MinWidth="200"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Bottom"
+            Margin="4"
+            ItemsSource="{Binding Source={StaticResource personasBuscables}}" 
+            ItemTemplateSelector="{StaticResource BuscadorTemplateSelector}"
+            Binding="{Binding Actual.Nombre}" 
+            Actual="{Binding Actual, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            MaxCompletions="5"/>
+    </Grid>
+</UserControl>
