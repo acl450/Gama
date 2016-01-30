@@ -17,7 +17,7 @@ namespace Gama.Atenciones.Wpf.DesignTimeData
             this.Email = "GustavoAdolfo@gmail.com";
             this.Nif = "00000000T";
             this.Nacionalidad = "Español";
-            this.FechaDeNacimiento = null;
+            this.FechaDeNacimiento = DateTime.Now;
             this.NumeroDeAtendido = 1;
             this.EstadoCivil = Enums.EstadoCivil.Casada;
             this.Orientacion = Enums.Orientacion.Lesbiana;

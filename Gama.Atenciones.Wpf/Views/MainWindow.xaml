@@ -1,4 +1,4 @@
-﻿<Window x:Class="Gama.Atenciones.Wpf.MainWindow"
+﻿<Window x:Class="Gama.Atenciones.Wpf.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,23 +6,43 @@
         xmlns:local="clr-namespace:Gama.Atenciones.Wpf"
         xmlns:designData="clr-namespace:Gama.Atenciones.Wpf.DesignTimeData"
         xmlns:controles="clr-namespace:Gama.Atenciones.Wpf.Controles"
+        
         mc:Ignorable="d"
-        Title="MainWindow" Height="707.292" Width="525"
-        SizeToContent="WidthAndHeight">
+        Title="MainWindow" 
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight" d:DesignWidth="834.5">
     <d:DataContext>
         <designData:DesignPersona/>
     </d:DataContext>
     <Grid>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition />
             <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto" MaxHeight="25"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        
-        <controles:PersonaControl Grid.Row="1" Grid.Column="0"/>
+
+        <controles:Cabecera Grid.ColumnSpan="2"/>
+
+        <controles:BuscadorDePersonasControl
+            Grid.Row="1" 
+            VerticalAlignment="Center"/>
+
+        <controles:AccionesDePersonaControl 
+            Grid.Row="1" 
+            Grid.Column="1" 
+            VerticalAlignment="Center"
+            Margin="8"/>
+
+        <controles:PersonaControl Grid.Row="2" Background="{DynamicResource ContentBrush}"/>
+
+        <Button Grid.Row="2" Grid.Column="1" Content=" "  Background="{DynamicResource ContentBrush}"/>
+
+        <controles:Footer Grid.Row="3" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>

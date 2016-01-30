@@ -7,12 +7,13 @@
              xmlns:designData="clr-namespace:Gama.Atenciones.Wpf.DesignTimeData"
              xmlns:util="clr-namespace:Gama.Atenciones.Biz.Util;assembly=Gama.Atenciones.Biz"
              mc:Ignorable="d"
-             Background="Gray" Height="497.116" Width="423"
-             >
+             Background="Gray"
+             d:DesignHeight="482">
     <d:DataContext>
         <designData:DesignPersona/>
     </d:DataContext>
-    <Grid Margin="10" Grid.IsSharedSizeScope="True">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="10" Grid.IsSharedSizeScope="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" SharedSizeGroup="PrimeraColumna"/>
             <ColumnDefinition Width="*"/>
@@ -31,7 +32,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
+        
         <TextBlock Text="{Binding Nombre}" FontSize="16" Grid.ColumnSpan="2"/>
 
         <TextBox Grid.Row="1" Text="{Binding Email}" Grid.ColumnSpan="2"/>
@@ -104,4 +105,5 @@
             </Grid>
         </GroupBox>
     </Grid>
+    </ScrollViewer>
 </UserControl>

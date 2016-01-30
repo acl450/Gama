@@ -75,6 +75,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controles\AccionesDePersonaControl.xaml.cs">
+      <DependentUpon>AccionesDePersonaControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\AutoCompleteTextBox\AutoCompleteTextBox.cs" />
+    <Compile Include="Controles\AutoCompleteTextBox\LimitedCollectionView.cs" />
+    <Compile Include="Controles\AutoCompleteTextBox\LimitedListCollectionView.cs" />
+    <Compile Include="Controles\ListBoxItemBehavior.cs" />
+    <Compile Include="Controles\BuscadorDePersonasControl.xaml.cs">
+      <DependentUpon>BuscadorDePersonasControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\BuscadorDePersonasDataTemplateSelector.cs" />
+    <Compile Include="Controles\Cabecera.xaml.cs">
+      <DependentUpon>Cabecera.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Footer.xaml.cs">
+      <DependentUpon>Footer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controles\PersonaControl.xaml.cs">
       <DependentUpon>PersonaControl.xaml</DependentUpon>
     </Compile>
@@ -82,18 +99,51 @@
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\PersonaEditViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Compile Include="Views\EditarPersonaView.xaml.cs">
-      <DependentUpon>EditarPersonaView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Wrapper\CitaWrapper.cs" />
     <Compile Include="Wrapper\DireccionWrapper.cs" />
     <Compile Include="Wrapper\ModelWrapper.cs" />
     <Compile Include="Wrapper\PersonaWrapper.cs" />
+    <Page Include="Assets\appbar.add.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\AccionesDePersonaControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\Cabecera.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\Footer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Estilos\AutoCompleteTextBoxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Estilos\EsperarResultadoDeBusquedaDataTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Estilos\General.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Estilos\ResultadoDeBusquedaDataTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\BuscadorDePersonasControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controles\PersonaControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -101,14 +151,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\EditarPersonaView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -152,6 +198,9 @@
       <Project>{675c4ff2-6275-44e1-b257-aa00b07c938a}</Project>
       <Name>Gama.Atenciones.Biz</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\user-128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

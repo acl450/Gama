@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Gama.Atenciones.Wpf
+namespace Gama.Atenciones.Wpf.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,7 +23,8 @@ namespace Gama.Atenciones.Wpf
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new Gama.Atenciones.Wpf.DesignTimeData.DesignPersona();
+            //this.DataContext = new Gama.Atenciones.Wpf.DesignTimeData.DesignPersona();
+            this.DataContext = new MainWindowViewModel();
         }
     }
 }
