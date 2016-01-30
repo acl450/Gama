@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gama.Atenciones.Wpf.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,7 @@ namespace Gama.Atenciones.Wpf.Views
         {
             InitializeComponent();
             //this.DataContext = new Gama.Atenciones.Wpf.DesignTimeData.DesignPersona();
-            this.DataContext = new MainWindowViewModel();
+            this.DataContext = new MainViewModel();
         }
     }
 }

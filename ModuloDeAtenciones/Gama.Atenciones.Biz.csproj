@@ -74,6 +74,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Atencion.cs" />
     <Compile Include="Util\EnumBindingSourceExtension.cs" />
     <Compile Include="Util\EnumDescriptionTypeConverter.cs" />
   </ItemGroup>
