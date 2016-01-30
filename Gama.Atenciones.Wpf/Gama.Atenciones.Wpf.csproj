@@ -99,6 +99,7 @@
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\PersonaEditViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="Wrapper\AtencionWrapper.cs" />
     <Compile Include="Wrapper\CitaWrapper.cs" />
     <Compile Include="Wrapper\DireccionWrapper.cs" />
     <Compile Include="Wrapper\ModelWrapper.cs" />

@@ -13,12 +13,6 @@ namespace Gama.Atenciones.Wpf.Wrapper
         {
         }
 
-        public int Id
-        {
-            get { return GetValue<int>(); }
-            set { SetValue(value); }
-        }
-
         public DateTime Fecha
         {
             get { return GetValue<DateTime>(); }

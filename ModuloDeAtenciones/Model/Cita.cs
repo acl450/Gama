@@ -13,5 +13,8 @@ namespace Gama.Atenciones.Biz.Model
         public string Asesor { get; set; }
 
         public string Sala { get; set; }
+
+        // Puede ser nula
+        public Atencion Atencion { get; set; }
     }
 }
